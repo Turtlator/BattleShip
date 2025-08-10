@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battleship Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Battleship Game</h1>
+        
+        <div class="game-mode-selection" id="game-mode-selection">
+            <h2>Choose Game Mode</h2>
+            <button id="vs-player-btn" class="mode-btn">Play vs Player</button>
+            <button id="vs-ai-btn" class="mode-btn">Play vs AI</button>
+        </div>
+        
+        <div class="game-info">
+            <div class="current-player">Current Player: <span id="current-player">Player 1</span></div>
+            <div class="game-phase">Phase: <span id="game-phase">Ship Placement</span></div>
+        </div>
+
+        <div class="game-boards">
+            <div class="player-section">
+                <h2>Your Fleet</h2>
+                <div class="board" id="player1-board"></div>
+                <div class="ships-to-place">
+                    <h3>Ships to Place:</h3>
+                    <div class="ship-list">
+                        <div class="ship-item" data-ship="carrier" data-size="5">Carrier (5)</div>
+                        <div class="ship-item" data-ship="battleship" data-size="4">Battleship (4)</div>
+                        <div class="ship-item" data-ship="cruiser" data-size="3">Cruiser (3)</div>
+                        <div class="ship-item" data-ship="submarine" data-size="3">Submarine (3)</div>
+                        <div class="ship-item" data-ship="destroyer" data-size="2">Destroyer (2)</div>
+                    </div>
+                    <button id="rotate-btn">Rotate Ship</button>
+                    <button id="ready-btn" disabled>Ready!</button>
+                </div>
+            </div>
+
+            <div class="opponent-section">
+                <h2>Enemy Waters</h2>
+                <div class="board" id="player2-board"></div>
+                <div class="opponent-controls">
+                    <button id="new-game-btn">New Game</button>
+                </div>
+                <div class="game-messages">
+                    <div id="message-display">Click on ships to select them, then click on your board to place them!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
